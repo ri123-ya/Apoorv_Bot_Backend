@@ -16,6 +16,7 @@ app.use(cors({
 
 app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+  res.setHeader('Access-Control-Allow-Origin', process.env.FRONTEND_URL);
   next();
 });
 // app.use((req, res, next) => {
