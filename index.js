@@ -25,6 +25,7 @@ app.options("*", cors());
 // });
 
 app.use(express.json());
+
 app.use("/api", chatRoute);
 
 app.get("/", (req, res) => {
