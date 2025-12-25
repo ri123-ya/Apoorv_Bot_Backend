@@ -14,7 +14,7 @@ app.use(cors({
 }));
 
 app.use((req, res, next) => {
-  res.setHeader("Access-Control-Allow-Header", "Content-Type");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
   next();
 });
 
