@@ -13,14 +13,14 @@ app.use(cors({
   allowedHeaders: ["Content-Type", "Authorization", "Accept"], 
 }));
 
-app.use((req, res, next) => {
-  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
-  next();
-});
-app.use((req, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", process.env.FRONTEND_URL);
-  next();
-});
+// app.use((req, res, next) => {
+//   res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+//   next();
+// });
+// app.use((req, res, next) => {
+//   res.setHeader("Access-Control-Allow-Origin", process.env.FRONTEND_URL);
+//   next();
+// });
 
 app.use(express.json());
 app.use("/api", chatRoute);
