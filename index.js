@@ -13,12 +13,11 @@ app.use(cors({
   allowedHeaders: ["Content-Type", "Authorization", "Accept"], 
 }));
 
-app.options("*", cors());
 
-// app.use((req, res, next) => {
-//   res.setHeader("Access-Control-Allow-Headers", "Content-Type");
-//   next();
-// });
+app.use((req, res, next) => {
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+  next();
+});
 // app.use((req, res, next) => {
 //   res.setHeader("Access-Control-Allow-Origin", process.env.FRONTEND_URL);
 //   next();
