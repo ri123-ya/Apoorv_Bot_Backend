@@ -16,13 +16,9 @@ app.use(cors({
 
 app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Headers", "Content-Type");
-  res.setHeader('Access-Control-Allow-Origin', process.env.FRONTEND_URL);
+  res.setHeader('Access-Control-Allow-Origin', "https://apoorvbot.netlify.app");
   next();
 });
-// app.use((req, res, next) => {
-//   res.setHeader("Access-Control-Allow-Origin", process.env.FRONTEND_URL);
-//   next();
-// });
 
 app.use(express.json());
 
